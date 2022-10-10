@@ -22,7 +22,6 @@ public class PostagemController {
 
     @GetMapping
     public ResponseEntity<List<Postagem>> getAll(){
-
         return ResponseEntity.ok(repository.findAll());
     }
 
