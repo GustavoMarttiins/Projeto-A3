@@ -7,6 +7,6 @@ import project.a3.com.jenelinha.entity.Postagem;
 import java.util.List;
 
 @Repository
-public interface PostagemRepository extends JpaRepository<Postagem, Long> {
+public interface PostagemRepository extends JpaRepository<Postagem, String> {
 
 }

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
@@ -26,6 +27,10 @@ public class Tema {
 
     @Column(name = "descricao", nullable = false)
     private String descricao;
+
+    @Column(name = "data")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date data = new java.sql.Date(System.currentTimeMillis());
 
     @JsonIgnore
     @OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
