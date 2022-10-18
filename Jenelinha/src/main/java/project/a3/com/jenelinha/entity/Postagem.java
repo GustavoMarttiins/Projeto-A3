@@ -18,10 +18,11 @@ import java.util.Date;
 @Table(name = "tb_postagem")
 public class Postagem {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private String id;
+    private Long id;
 
     @Column(name = "titulo", nullable = false)
     private String titulo;
@@ -33,7 +34,7 @@ public class Postagem {
     @Temporal(TemporalType.TIMESTAMP)
     private Date data = new java.sql.Date(System.currentTimeMillis());
 
-    @JsonIgnore
+
     @ManyToOne
     @JsonIgnoreProperties("postagem")
     private Tema tema;

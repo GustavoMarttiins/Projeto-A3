@@ -32,7 +32,7 @@ public class Tema {
     @Temporal(TemporalType.TIMESTAMP)
     private Date data = new java.sql.Date(System.currentTimeMillis());
 
-    @JsonIgnore
+
     @OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("tema")
     private List<Postagem> postagem;
