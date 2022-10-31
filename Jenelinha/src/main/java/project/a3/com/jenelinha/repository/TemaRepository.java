@@ -8,8 +8,5 @@ import java.util.List;
 
 @Repository
 public interface TemaRepository extends JpaRepository<Tema, Long> {
-    public List<Tema> findAllByDescricaoContainingIgnoreCase(String descricao);
-
-
 
 }
