@@ -12,11 +12,8 @@ import lombok.Setter;
 public class UsuarioLogin {
 
     private String nome;
-
     private String usuario;
-
     private String senha;
-
     private String token;
 
 }

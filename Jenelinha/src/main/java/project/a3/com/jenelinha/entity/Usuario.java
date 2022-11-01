@@ -23,6 +23,12 @@ public class Usuario {
     @Column(name = "nome", nullable = false)
     private String nome;
 
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @Column(name = "tipo", nullable = false)
+    private Boolean tipoAdmim;
+
     @Column(name = "usuario", nullable = false)
     private String usuario;
 
