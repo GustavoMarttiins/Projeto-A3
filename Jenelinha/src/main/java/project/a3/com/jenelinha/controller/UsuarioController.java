@@ -49,9 +49,9 @@ public class UsuarioController {
     }
 
    @PostMapping("/cadastrar")
-	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
-		return ResponseEntity.status(HttpStatus.CREATED)
-				.body(service.CadastrarUsuario(usuario));
+	public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario) {
+       return ResponseEntity.status(HttpStatus.CREATED)
+               .body(service.CadastrarUsuario(usuario));
 	}
 
     @PostMapping("/logar")
