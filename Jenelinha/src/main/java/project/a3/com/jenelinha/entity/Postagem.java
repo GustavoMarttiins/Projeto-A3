@@ -1,6 +1,7 @@
 package project.a3.com.jenelinha.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,7 @@ public class Postagem {
 
     @ManyToOne
     @JsonIgnoreProperties("postagem")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Tema tema;
 
 }
